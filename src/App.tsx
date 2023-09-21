@@ -1,6 +1,6 @@
 import React from "react";
-import { Home } from "./pages/home";
+import { TaskManager } from "./features/task-manager";
 
 export const App: React.FC = () => {
-  return <Home />;
+  return <TaskManager/>;
 };
