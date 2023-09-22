@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { useEvent, useStore } from "effector-react";
 import {
     $state,
     $inputFields,
+    init,
     addTask,
     deleteTask,
     touchTask,
@@ -48,7 +49,11 @@ export const TaskManager: React.FC = () => {
         deleteTaskFn(id);
     }
 
+    const initLocalStorage = useEvent(init);
 
+    useEffect(() => {
+        initLocalStorage(state);
+    }, [])
 
 
     return (
