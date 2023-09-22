@@ -19,11 +19,12 @@ export const $state = createStore<Store>([])
     })
     .on(addTask, (state, payload) => {
         const storage = localStorage.getItem("effector-task-manager");
+        const storeOnAddAct = (storePayload: Store) => [...storePayload, payload];
         if (storage) {
             const ls: Store = JSON.parse(storage);
             localStorage.setItem("effector-task-manager", JSON.stringify([...ls, payload]));
         }
-        return [...state, payload]
+        return storeOnAddAct(state);
     })
     .on(deleteTask, (state, payload) => {
         const storage = localStorage.getItem("effector-task-manager");
