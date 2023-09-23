@@ -1,5 +1,5 @@
 {
-  "hobmepage": "https://dotdaniil.github.io/effector-task-manager" ,
+  "homepage": "https://dotdaniil.github.io/effector-task-manager",
   "name": "effector-task-manager",
   "version": "0.1.0",
   "private": true,
