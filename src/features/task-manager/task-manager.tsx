@@ -57,9 +57,7 @@ export const TaskManager: React.FC = () => {
 
     useEffect(() => {
         initLocalStorage(state);
-    }, [])
-
-
+    }, [initLocalStorage, state])
 
 
     return (
